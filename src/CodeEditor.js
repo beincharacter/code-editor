@@ -13,6 +13,7 @@ const CodeEditorContainer = styled.div`
   border-radius: 4px;
   background: ${props => props.theme.editorBackground};
   display: flex;
+  height: 100vh;
 
   pre {
     margin: 0;

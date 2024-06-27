@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import CodeEditor from './CodeEditor';
-import { lightTheme, darkTheme, systemTheme } from './themes';
+import { lightTheme, darkTheme} from './themes';
 import './App.css';
 
 const Header = styled.div`
@@ -44,7 +44,6 @@ const App = () => {
           <ThemeSelector onChange={handleThemeChange} value={theme}>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
-            <option value="system">System</option>
           </ThemeSelector>
         </Header>
         <CodeEditor theme={getCurrentTheme()} />
