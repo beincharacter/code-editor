@@ -15,24 +15,19 @@ const Header = styled.div`
 
 const ThemeSelector = styled.select`
   padding: 8px;
-  border-radius: 4px;
   border: 1px solid ${props => props.theme.borderColor};
   background: ${props => props.theme.editorBackground};
   color: ${props => props.theme.text};
 `;
 
 const App = () => {
-  const [theme, setTheme] = useState('system');
+  const [theme, setTheme] = useState('light');
 
   const handleThemeChange = (event) => {
     setTheme(event.target.value);
   };
 
   const getCurrentTheme = () => {
-    if (theme === 'system') {
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      return systemPrefersDark ? darkTheme : lightTheme;
-    }
     return theme === 'dark' ? darkTheme : lightTheme;
   };
 
